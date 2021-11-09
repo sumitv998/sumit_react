@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+
+function GreatComponent(pops){
+  console.log(pops)
+  return <h1> Hello, {pops.name}</h1>
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+<GreatComponent name= "Sumit" children= "222">
+  <p> this is </p>
+  </GreatComponent>
+  )
 }
+
+
+// function App() {
+//   let[name, setname] = useState('')
+//   let[password, setpassword] = useState('')
+
+//   let message= ''
+//   if (name === 'admin'  && password === 'admin') {
+//     message = `Hello admin what's up`
+//   } else {
+//     message = 'who are you man'
+//   }
+//   return (
+//     <div>
+//       <span>{message}</span>
+//       <input type= "text" value= {name} onChange={updateTextField} />
+//       <input type= "password" value= {password} onChange={updatePassword} />
+//       <button onClick= {submitForm}> Submit Form</button>
+//     </div>
+      
+//   );
+
+//   function submitForm() {
+//      console.log(name, password);
+//   }
+
+//   function updatePassword(event) {
+//     setpassword(event.target.value)
+//   }
+
+//   function updateTextField(event) {
+//     setname(event.target.value)
+//   }
+// }
+
 
 export default App;
